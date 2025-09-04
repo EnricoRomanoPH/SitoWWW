@@ -2,8 +2,9 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<title>Enrico Romano – Portfolio</title>
+<title>Concept B&W – Enrico Romano</title>
 <link href="css/style.css" rel="stylesheet">
+<link href="js/lightbox.css" rel="stylesheet"> <!-- Lightbox2 CSS -->
 </head>
 <body>
 
@@ -15,25 +16,20 @@
 </nav>
 
 <header>
-  <h1>ENRICO ROMANO</h1>
+  <h1>Concept B&W</h1>
 </header>
 
 <main>
-  <h2>Seleziona una categoria</h2>
-  <div class="categories">
-    <a href="conceptbw.html" class="category">
-      <img src="images/conceptbw-thumb.jpg" alt="Ritratti">
-      <span>Ritratti</span>
-    </a>
-    <a href="conceptcol.html" class="category">
-      <img src="images/conceptcol-thumb.jpg" alt="Paesaggi">
-      <span>Paesaggi</span>
-    </a>
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> / Concept B&W
   </div>
+  <div id="gallery" data-category="conceptbw"></div>
 </main>
 
+<script src="js/lightbox.js"></script> <!-- Lightbox2 JS -->
+<script src="js/gallery.js"></script>
 <script>
-  // Evidenzia pagina corrente
+  // Evidenzia pagina corrente nella navbar
   const links = document.querySelectorAll('.navbar a');
   links.forEach(link => {
     if(link.href === window.location.href){
