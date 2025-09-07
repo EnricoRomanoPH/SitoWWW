@@ -9,3 +9,31 @@
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
+/* Miglioramento hover galleria */
+.gallery img {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 5px;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Frecce lightbox */
+.lightbox #prev, .lightbox #next {
+  position: absolute;
+  top: 50%;
+  color: white;
+  font-size: 50px;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(-50%);
+}
+
+.lightbox #prev { left: 20px; }
+.lightbox #next { right: 20px; }
+
