@@ -109,10 +109,9 @@ nav a:active {
 
 .home-image {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 0;
-  overflow: hidden; /* impedisce lo sforamento */
+  justify-content: center; /* centra orizzontalmente */
+  align-items: center;     /* centra verticalmente */
+  height: 100vh;           /* altezza del contenitore = altezza finestra */
 }
 
 .home-image img {
@@ -121,7 +120,6 @@ nav a:active {
   width: auto;
   height: auto;
   display: block;
-  margin: 0 auto;   /* centrata orizzontalmente */
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   border-radius: 10px;
 }
