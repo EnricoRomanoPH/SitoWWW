@@ -112,11 +112,12 @@ nav a:active {
   justify-content: center;
   align-items: center;
   padding: 40px 0;
+  overflow: hidden; /* impedisce lo sforamento */
 }
 
 .home-image img {
-  max-width: 100vw;   /* non più larga dello schermo */
-  max-height: 100vh;  /* non più alta dello schermo */
+  max-width: 100%;   /* mai più largo del contenitore */
+  max-height: 100vh; /* mai più alto dello schermo */
   width: auto;
   height: auto;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
