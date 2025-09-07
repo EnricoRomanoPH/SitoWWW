@@ -13,10 +13,21 @@ header {
 }
 
 nav a {
-  color: white;
+  color: black;               /* testo nero */
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+  padding: 8px 15px;          /* più click-friendly */
+  border-radius: 5px;         /* angoli arrotondati */
+  transition: all 0.3s ease;  /* transizione morbida */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* leggera ombra */
+}
+
+/* effetto hover */
+nav a:hover {
+  background: #f0f0f0;        /* leggero sfondo grigio */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* ombra più evidente */
+  transform: translateY(-2px); /* sollevamento delicato */
 }
 
 .gallery {
