@@ -12,8 +12,9 @@ header {
   text-align: center;
 }
 
-nav a {
-  color: white;               /* testo bianco di default */
+av a {
+  background: #222;           /* sfondo nero */
+  color: white;               /* testo bianco */
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
@@ -23,11 +24,11 @@ nav a {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* leggera ombra */
 }
 
-/* effetto hover */
+/* Hover: effetto leggero */
 nav a:hover {
-  background: #444;             /* sfondo leggermente più chiaro del nero */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* ombra più evidente */
-  transform: translateY(-2px);  /* effetto sollevamento delicato */
+  background: #444;             /* sfondo leggermente più chiaro */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
 }
 
 .gallery {
