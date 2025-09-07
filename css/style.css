@@ -116,12 +116,12 @@ nav a:active {
 }
 
 .home-image img {
-
-  max-height: 50vh;  /* metà dell’altezza dello schermo */
+  max-width: 50vw;   /* massimo 50% della larghezza dello schermo */
+  max-height: 50vh;  /* massimo 50% dell’altezza dello schermo */
   width: auto;
   height: auto;
+  display: block;
+  margin: 0 auto;   /* centrata orizzontalmente */
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   border-radius: 10px;
-  display: block;
-  margin: 0 auto;
 }
