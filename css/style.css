@@ -61,3 +61,17 @@ nav a {
   color: white;
   cursor: pointer;
 }
+/* Frecce lightbox */
+.lightbox #prev, .lightbox #next {
+  position: absolute;
+  top: 50%;
+  color: white;
+  font-size: 50px;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(-50%);
+}
+
+.lightbox #prev { left: 20px; }
+.lightbox #next { right: 20px; }
