@@ -24,24 +24,32 @@ nav a {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* forza colore anche su link visitati e attivi */
+nav a,
 nav a:link,
 nav a:visited {
-  color: white;
+  background: #222;      /* sfondo nero in ogni stato */
+  color: white;          /* testo bianco sempre */
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-
+/* Hover */
 nav a:hover {
   background: #444;       /* grigio più chiaro */
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   transform: translateY(-2px);
 }
 
+/* Click (active) */
 nav a:active {
+  background: #666;       /* grigio medio */
   color: white;
-  background: #666;       /* feedback clic */
 }
-
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
