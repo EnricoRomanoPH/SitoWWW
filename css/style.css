@@ -109,14 +109,16 @@ nav a:active {
 
 .home-image {
   display: flex;
-  justify-content: center; /* centra orizzontalmente */
-  align-items: center;     /* centra verticalmente */
-  height: 100vh;           /* altezza del contenitore = altezza finestra */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;           /* assicura che il contenitore non superi la finestra */
+  overflow: hidden;       /* impedisce scroll indesiderato */
 }
 
 .home-image img {
-  max-width: 50vw;   /* massimo 50% della larghezza dello schermo */
-  max-height: 50vh;  /* massimo 50% dell’altezza dello schermo */
+  max-width: 50%;    /* metà della larghezza del contenitore */
+  max-height: 50%;   /* metà dell’altezza del contenitore */
   width: auto;
   height: auto;
   display: block;
