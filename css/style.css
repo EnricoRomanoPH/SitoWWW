@@ -116,10 +116,13 @@ nav a:active {
 }
 
 .home-image img {
-  max-width: 100%;   /* mai più largo del contenitore */
-  max-height: 100%; /* mai più alto dello schermo */
+  max-width: 100%;
+  max-height: 100vh; /* mai più alto dello schermo */
   width: auto;
   height: auto;
+  object-fit: contain; /* ridimensiona per stare dentro allo schermo */
+  display: block;
+  margin: 0 auto; /* centrata orizzontalmente */
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   border-radius: 10px;
 }
