@@ -106,3 +106,17 @@ nav a:active {
 
 .lightbox #prev { left: 20px; }
 .lightbox #next { right: 20px; }
+
+.home-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.home-image img {
+  max-width: 80%;   /* non fa uscire l’immagine dai bordi */
+  height: auto;     /* mantiene proporzioni */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* ombra leggera */
+  border-radius: 10px; /* angoli leggermente arrotondati */
+}
