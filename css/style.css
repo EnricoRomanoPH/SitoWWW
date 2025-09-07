@@ -6,28 +6,28 @@ body {
 }
 
 header {
-  background: #222;
+  background: #222;  /* sfondo nero scuro */
   color: white;
   padding: 1rem;
   text-align: center;
 }
 
 nav a {
-  color: black;               /* testo nero */
+  color: white;               /* testo bianco di default */
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
-  padding: 8px 15px;          /* più click-friendly */
-  border-radius: 5px;         /* angoli arrotondati */
-  transition: all 0.3s ease;  /* transizione morbida */
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* leggera ombra */
 }
 
 /* effetto hover */
 nav a:hover {
-  background: #f0f0f0;        /* leggero sfondo grigio */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* ombra più evidente */
-  transform: translateY(-2px); /* sollevamento delicato */
+  background: #444;             /* sfondo leggermente più chiaro del nero */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* ombra più evidente */
+  transform: translateY(-2px);  /* effetto sollevamento delicato */
 }
 
 .gallery {
