@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Concept B/W</title>
+  <title>Landscape B/W</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <h1>Concept B/W</h1>
+    <h1>Landscape B/W</h1>
     <nav>
       <a href="index.html">Home</a>
+      <a href="conceptbw.html">Concept B/W</a>
       <a href="conceptcol.html">Concept Colore</a>
+      <a href="landscapecol.html">Landscape Colore</a>
     </nav>
   </header>
 
@@ -19,16 +21,16 @@
     <div id="gallery" class="gallery"></div>
   </main>
 
-<div id="lightbox" class="lightbox">
-  <span id="close">&times;</span>
-  <span id="prev">&#10094;</span> <!-- freccia indietro -->
-  <span id="next">&#10095;</span> <!-- freccia avanti -->
-  <img id="lightbox-img" src="" alt="">
-</div>
+  <div id="lightbox" class="lightbox">
+    <span id="close">&times;</span>
+    <span id="prev">&#10094;</span>
+    <span id="next">&#10095;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
 
   <script src="js/gallery.js"></script>
   <script>
-    loadGallery("data/conceptbw.json", "gallery");
+    loadGallery("data/landscapebw.json", "gallery");
   </script>
 </body>
 </html>
