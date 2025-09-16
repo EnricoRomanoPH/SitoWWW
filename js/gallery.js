@@ -11,6 +11,7 @@ function loadGallery(jsonFile, containerId) {
         const img = document.createElement("img");
         img.src = imgPath;
         img.alt = "foto";
+        img.loading = "lazy"; // 🚀 Lazy loading
         img.addEventListener("click", () => openLightbox(index));
         container.appendChild(img);
       });
