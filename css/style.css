@@ -125,3 +125,24 @@ nav a:active {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   border-radius: 10px;
 }
+
+/* fade-in immagini gallery */
+.gallery img {
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
+
+.gallery img.loaded {
+  opacity: 1;
+}
+
+/* fade-in lightbox */
+.lightbox img {
+  opacity: 0;
+  transition: opacity 0.6s ease-in;
+}
+
+.lightbox img.loaded {
+  opacity: 1;
+}
+
