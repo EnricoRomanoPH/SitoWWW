@@ -1,3 +1,6 @@
+/* ==========================
+   Stile generale
+========================== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,51 +8,98 @@ body {
   color: #333;
 }
 
+/* ==========================
+   Header e menu
+========================== */
 header {
-  background: #222;  /* sfondo nero scuro */
+  background: #222;
   color: white;
   padding: 1rem;
   text-align: center;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;   /* desktop: una riga */
+  padding: 0.5rem 1rem;
+}
+
 nav a {
-  background: #222;      /* sfondo nero */
-  color: white;          /* testo bianco sempre */
-  margin: 0 15px;
+  background: #000;      /* nero */
+  color: white;          /* testo bianco */
+  margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
   padding: 8px 15px;
   border-radius: 5px;
   transition: all 0.3s ease;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  flex: 0 0 auto;
 }
 
-nav a,
 nav a:link,
 nav a:visited {
-  background: #222;      /* sfondo nero in ogni stato */
-  color: white;          /* testo bianco sempre */
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: white;
 }
 
-/* Hover */
 nav a:hover {
-  background: #444;       /* grigio più chiaro */
+  background: #444;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   transform: translateY(-2px);
 }
 
-/* Click (active) */
 nav a:active {
-  background: #666;       /* grigio medio */
+  background: #666;
   color: white;
 }
+
+/* Responsive menu */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;   /* tablet/smartphone: più righe se necessario */
+  }
+}
+
+/* ==========================
+   Home page immagine
+========================== */
+.home-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.home-image img {
+  max-width: 50%;
+  max-height: 50%;
+  width: auto;
+  height: auto;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+  .home-image img {
+    max-width: 70%;
+    max-height: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-image img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+}
+
+/* ==========================
+   Galleria immagini
+========================== */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -59,15 +109,27 @@ nav a:active {
 
 .gallery img {
   width: 100%;
+  height: 200px;         /* altezza uniforme */
+  object-fit: cover;     /* taglia/centra immagine senza deformarla */
   cursor: pointer;
   transition: transform 0.2s;
+  border-radius: 5px;
 }
 
 .gallery img:hover {
   transform: scale(1.05);
 }
 
-/* Lightbox */
+/* Alternativa con aspect-ratio */
+.gallery img.aspect {
+  width: 100%;
+  aspect-ratio: 1/1;      /* quadrato, cambia in 4/3 o 16/9 se vuoi */
+  object-fit: cover;
+}
+
+/* ==========================
+   Lightbox
+========================== */
 .lightbox {
   display: none;
   position: fixed;
@@ -92,7 +154,8 @@ nav a:active {
   color: white;
   cursor: pointer;
 }
-/* Frecce lightbox */
+
+/* Frecce Lightbox */
 .lightbox #prev, .lightbox #next {
   position: absolute;
   top: 50%;
@@ -106,43 +169,3 @@ nav a:active {
 
 .lightbox #prev { left: 20px; }
 .lightbox #next { right: 20px; }
-
-.home-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;           /* assicura che il contenitore non superi la finestra */
-  overflow: hidden;       /* impedisce scroll indesiderato */
-}
-
-.home-image img {
-  max-width: 50%;    /* metà della larghezza del contenitore */
-  max-height: 50%;   /* metà dell’altezza del contenitore */
-  width: auto;
-  height: auto;
-  display: block;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  border-radius: 10px;
-}
-
-/* fade-in immagini gallery */
-.gallery img {
-  opacity: 0;
-  transition: opacity 0.8s ease-in;
-}
-
-.gallery img.loaded {
-  opacity: 1;
-}
-
-/* fade-in lightbox */
-.lightbox img {
-  opacity: 0;
-  transition: opacity 0.6s ease-in;
-}
-
-.lightbox img.loaded {
-  opacity: 1;
-}
-
