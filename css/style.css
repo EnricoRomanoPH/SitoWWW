@@ -107,24 +107,28 @@ nav a:active {
   padding: 20px;
 }
 
-.gallery img {
-  width: 100%;
-  height: 200px;         /* altezza uniforme */
-  object-fit: cover;     /* taglia/centra immagine senza deformarla */
-  cursor: pointer;
-  transition: transform 0.2s;
+/* Cella della griglia */
+.gallery-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;       /* altezza fissa della cella */
+  overflow: hidden;
+  background: #f5f5f5; /* sfondo leggero per celle vuote */
   border-radius: 5px;
 }
 
-.gallery img:hover {
-  transform: scale(1.05);
+/* Immagine centrata e non ritagliata */
+.gallery-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;   /* nessun ritaglio */
+  transition: transform 0.2s;
+  display: block;
 }
 
-/* Alternativa con aspect-ratio */
-.gallery img.aspect {
-  width: 100%;
-  aspect-ratio: 1/1;      /* quadrato, cambia in 4/3 o 16/9 se vuoi */
-  object-fit: cover;
+.gallery-item img:hover {
+  transform: scale(1.05);
 }
 
 /* ==========================
