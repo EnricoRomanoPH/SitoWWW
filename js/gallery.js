@@ -2,7 +2,7 @@
 let currentIndex = 0;
 let imagesList = [];
 
-const INITIAL_RENDER = 6; // prime 6 immagini renderizzate subito
+const INITIAL_RENDER = 3; // prime 6 immagini renderizzate subito
 const PLACEHOLDER = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSI5Ij48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlIi8+PC9zdmc+';
 
 // funzione per creare una singola immagine
