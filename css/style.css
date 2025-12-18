@@ -107,27 +107,15 @@ nav a:active {
   padding: 20px;
 }
 
-/* Cella della griglia */
-.gallery-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;       /* altezza fissa della cella */
-  overflow: hidden;
-  background: #f5f5f5; /* sfondo leggero per celle vuote */
+.gallery img {
+  width: 100%;
+  height: auto;       /* mantiene proporzioni */
+  cursor: pointer;
+  transition: transform 0.2s;
   border-radius: 5px;
 }
 
-/* Immagine centrata e non ritagliata */
-.gallery-item img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;   /* nessun ritaglio */
-  transition: transform 0.2s;
-  display: block;
-}
-
-.gallery-item img:hover {
+.gallery img:hover {
   transform: scale(1.05);
 }
 
@@ -143,11 +131,13 @@ nav a:active {
   background: rgba(0,0,0,0.9);
   justify-content: center;
   align-items: center;
+  flex-direction: column; /* permette controlli sotto l'immagine */
 }
 
 .lightbox img {
   max-width: 90%;
-  max-height: 90%;
+  max-height: 80%;  /* lascia spazio in basso per le frecce */
+  margin-bottom: 20px;
 }
 
 .lightbox #close {
@@ -159,17 +149,24 @@ nav a:active {
   cursor: pointer;
 }
 
-/* Frecce Lightbox */
-.lightbox #prev, .lightbox #next {
-  position: absolute;
-  top: 50%;
-  color: white;
-  font-size: 50px;
-  padding: 10px;
-  cursor: pointer;
-  user-select: none;
-  transform: translateY(-50%);
+/* Controlli frecce in basso */
+.lightbox-controls {
+  display: flex;
+  gap: 60px;           /* spazio tra frecce */
+  justify-content: center;
+  align-items: center;
+  z-index: 1010;
 }
 
-.lightbox #prev { left: 20px; }
-.lightbox #next { right: 20px; }
+.lightbox-controls span {
+  color: white;
+  font-size: 30px;     /* più stilizzate */
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.lightbox-controls span:hover {
+  transform: scale(1.2);
+  color: #ddd;
+}
