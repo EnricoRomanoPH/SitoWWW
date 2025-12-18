@@ -17,7 +17,7 @@ function renderImage(item, index, container) {
   if (typeof item === 'object' && item.large) img.dataset.large = item.large;
   img.dataset.index = index;
   img.alt = alt;
-  img.className = 'gallery-thumb';
+  img.className = 'gallery-thumb aspect';
   img.loading = 'lazy';
   img.src = PLACEHOLDER;
 
